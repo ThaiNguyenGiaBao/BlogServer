@@ -1,0 +1,73 @@
+
+### 
+POST http://localhost:3001/signin
+Content-Type: application/json
+
+{
+    "email": "bao@gmail.com",
+    "password": "123"
+}
+
+
+### Update User
+PUT http://localhost:3001/user/update/669fcb36ca1ed23d24a9e4f0
+Content-Type: application/json
+
+{
+    "username": "giabao123",
+    "email": "bao@gmail.com",
+    "password": "123"
+}
+
+### Create post
+POST http://localhost:3001/post/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
+
+{
+    "title": "Post1",
+    "content": "Content1"
+}
+
+### Get posts
+GET http://localhost:3001/post/getposts?limit=1&startIdx=0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
+
+### Get user
+GET http://localhost:3001/user/getusers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
+
+### Get post by slug
+GET http://localhost:3001/post/computer
+
+### Add comment
+POST http://localhost:3001/comment/addcomment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
+
+{
+    "userId": "66a360911557f222c23878c1",
+    "postId":  "66a27aaf22d8d1656b7005b6",
+    "content": "fasd"
+}
+
+### Get comments
+GET http://localhost:3001/comment/66a21fc07d0afc4be50f960e
+
+
+### Add comment
+GET "http://localhost:3001/comment/addcomment",
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
+
+
+### Update comment
+PUT http://localhost:3001/comment/update/66a39a98a215a54fb818a987
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI2N2NkY2FkMWZkMzE3YTkyNzg5MiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTk5OTU0Nn0.SiivbXDWxhEa8LIMI-BRhcxcSOTEsceeY23S9iX_R4w
+
+{
+    "content": "phuc hehe 123"
+}
