@@ -7,9 +7,10 @@ const commentRoute = require("./routes/comment");
 const post = require("./routes/post");
 const cookies = require("cookie-parser");
 const cors = require("cors");
-const User = require("./models/user");
 
 dotenv.config();
+
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 app.use(express.json());
@@ -33,6 +34,6 @@ app.use("/user", userRoute);
 app.use("/post", post);
 app.use("/comment", commentRoute);
 
-app.listen(3001, () => {
-  console.log("Server is running on port 3001");
+app.listen(PORT, () => {
+  console.log("Server is running on port"+PORT);
 });
