@@ -1,16 +1,16 @@
 
 ### 
-POST http://localhost:3001/signin
+POST http://14.225.192.183:8000/signin
 Content-Type: application/json
 
 {
-    "email": "bao@gmail.com",
+    "email": "bao.thainguyenkhmt@hcmut.edu.vn",
     "password": "123"
 }
 
 
 ### Update User
-PUT http://localhost:3001/user/update/669fcb36ca1ed23d24a9e4f0
+PUT http://14.225.192.183:8000/user/update/669fcb36ca1ed23d24a9e4f0
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ### Create post
-POST http://localhost:3001/post/create
+POST http://14.225.192.183:8000/post/create
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
 
@@ -30,20 +30,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y
 }
 
 ### Get posts
-GET http://localhost:3001/post/getposts?limit=1&startIdx=0
+GET http://14.225.192.183:8000/post/getposts?limit=1&startIdx=0
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
 
 ### Get user
-GET http://localhost:3001/user/getusers
+GET http://14.225.192.183:8000/user/getusers
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
 
 ### Get post by slug
-GET http://localhost:3001/post/computer
+GET http://14.225.192.183:8000/post/computer
 
 ### Add comment
-POST http://localhost:3001/comment/addcomment
+POST http://14.225.192.183:8000/comment/addcomment
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
 
@@ -54,20 +54,30 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y
 }
 
 ### Get comments
-GET http://localhost:3001/comment/66a21fc07d0afc4be50f960e
+GET http://14.225.192.183:8000/comment/66a21fc07d0afc4be50f960e
 
 
 ### Add comment
-GET "http://localhost:3001/comment/addcomment",
+GET "http://14.225.192.183:8000/comment/addcomment",
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZjYjM2Y2ExZWQyM2QyNGE5ZTRmMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTgzMjg1MH0.wqCtnvyf31sSwWbSsp37aXNwTuhAb5SyuQRTn4Zm5io
 
 
 ### Update comment
-PUT http://localhost:3001/comment/update/66a39a98a215a54fb818a987
+PUT http://14.225.192.183:8000/comment/update/66a39a98a215a54fb818a987
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI2N2NkY2FkMWZkMzE3YTkyNzg5MiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTk5OTU0Nn0.SiivbXDWxhEa8LIMI-BRhcxcSOTEsceeY23S9iX_R4w
 
 {
     "content": "phuc hehe 123"
+}
+
+### Test
+POST http://14.225.192.183:8000/signup
+Content-Type: application/json
+
+{
+    "username": "bao",
+    "email": "bao@123",
+    "password": "123",
 }
